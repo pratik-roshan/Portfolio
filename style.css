@@ -19,7 +19,15 @@ body{
     background-size: cover;
     background-position: center;
 }
-
+/* .navbarScroll.navbar-dark {
+    background-color: black;
+} */
+.navbarScroll {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    z-index: 1;
+}
 .container{
     padding: 10px 10%;
 }
