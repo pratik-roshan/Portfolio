@@ -32,15 +32,51 @@
     <div class="container">
         <div class="row">
             <div class="about-column-1">
-                <img src="images/IMG_2659.jpg">
+                <img src="images/user.jpeg">
             </div>
             <div class="about-column-2">
-                <h1>About Me</h1>
+                <h1 class="sub-title">About Me</h1>
+                <p>As a computer programmer and a student, I have a unique combination of skills that makes me a valuable asset in the tech industry. My passion for technology and programming is evident through my commitment to learning and mastering various programming languages and tools. As a student, I am diligent and dedicated, always seeking to expand my knowledge and skill set. My ability to balance academic pursuits with my programming projects demonstrates mine excellent time management skills and determination to succeed. I am a creative problem-solver, always looking for innovative solutions to challenging programming problems. With my strong work ethic and technical expertise, I am poised to make a significant impact in the field of computer programming.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links " onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Flutter</span><br>Mobile Application Development</li>
+                        <li><span>Python</span><br>Web Application Development, Data Analysis and Automation</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018-2023</span><br>BE from Institute of Engineering, Tribhuvan University</li>
+                        <li><span>2016-2018</span><br>High School from Vishwadeepthi CMI Public School</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
     
 </body>
 </html>
